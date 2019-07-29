@@ -8,6 +8,8 @@ public struct TDSwiftRoundedIconGradientButtonConfig {
     let gradientAY: Double
     let gradientBX: Double
     let gradientBY: Double
+    let text: String
+    let textColor: UIColor
 }
 
 public class TDSwiftRoundedIconGradientButton: UIButton {
@@ -34,6 +36,12 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
     @IBInspectable
     public var gradientBY: Double = 0.5
     
+    @IBInspectable
+    public var text: String = "N/A"
+    
+    @IBInspectable
+    public var textColor: UIColor = .white
+    
     public override func awakeFromNib() {
         super.awakeFromNib()
         updateButtonAppearance()
@@ -51,6 +59,8 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
         self.gradientAY = config.gradientAY
         self.gradientBX = config.gradientBX
         self.gradientBY = config.gradientBY
+        self.text = config.text
+        self.textColor = config.textColor
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -83,5 +93,21 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
         shapeLayer.frame = layer.bounds
         layer.backgroundColor = UIColor.clear.cgColor
         gradientLayer.mask = shapeLayer
+        
+        // Icon
+        let iconImageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 14.0, height: 14.0)))
+        iconImageView.contentMode = .scaleAspectFit
+        iconImageView.image = self.iconImage
+        iconImageView.center = CGPoint(x: 13.0 + iconImageView.frame.width / 2, y: self.frame.height / 2)
+        self.addSubview(iconImageView)
+        
+        // Text
+        let textLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: self.bounds.width - iconImageView.frame.maxX - 10.0 - 15.0, height: 15.0)))
+        textLabel.center = CGPoint(x: iconImageView.frame.maxX + 10.0 + textLabel.bounds.width / 2, y: self.bounds.height / 2)
+        textLabel.textColor = textColor
+        textLabel.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        textLabel.textAlignment = .left
+        textLabel.text = text
+        self.addSubview(textLabel)
     }
 }

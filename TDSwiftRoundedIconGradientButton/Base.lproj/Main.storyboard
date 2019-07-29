@@ -39,6 +39,11 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColorB">
                                         <color key="value" red="0.55686274509803924" green="0.32941176470588235" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Some TextSome TextSome TextSome TextSome TextSome TextSome TextSome TextSome Text"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="notepad"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
@@ -57,4 +62,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="notepad" width="12" height="14"/>
+    </resources>
 </document>
