@@ -10,6 +10,7 @@ public struct TDSwiftRoundedIconGradientButtonConfig {
     let gradientBY: Double
     let text: String
     let textColor: UIColor
+    let action: () -> Void
 }
 
 public class TDSwiftRoundedIconGradientButton: UIButton {
@@ -42,6 +43,8 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
     @IBInspectable
     public var textColor: UIColor = .white
     
+    public var action: () -> Void = {}
+    
     public override func awakeFromNib() {
         super.awakeFromNib()
         updateButtonAppearance()
@@ -61,6 +64,7 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
         self.gradientBY = config.gradientBY
         self.text = config.text
         self.textColor = config.textColor
+        self.action = config.action
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -109,5 +113,15 @@ public class TDSwiftRoundedIconGradientButton: UIButton {
         textLabel.textAlignment = .left
         textLabel.text = text
         self.addSubview(textLabel)
+    }
+    
+    public func enable() {
+        self.isEnabled = true
+        self.alpha = 1.0
+    }
+    
+    public func disable() {
+        self.isEnabled = false
+        self.alpha = 0.5
     }
 }
