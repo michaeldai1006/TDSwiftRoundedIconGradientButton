@@ -12,6 +12,7 @@
 		5509DC0B22EF12D600C376C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5509DC0922EF12D600C376C8 /* Main.storyboard */; };
 		5509DC0D22EF12D800C376C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5509DC0C22EF12D800C376C8 /* Assets.xcassets */; };
 		5509DC1022EF12D800C376C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5509DC0E22EF12D800C376C8 /* LaunchScreen.storyboard */; };
+		5509DC1922EF136F00C376C8 /* TDSwiftRoundedIconGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5509DC1822EF136F00C376C8 /* TDSwiftRoundedIconGradientButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5509DC0C22EF12D800C376C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5509DC0F22EF12D800C376C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5509DC1122EF12D800C376C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5509DC1822EF136F00C376C8 /* TDSwiftRoundedIconGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSwiftRoundedIconGradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,21 @@
 		5509DC0422EF12D600C376C8 /* TDSwiftRoundedIconGradientButton */ = {
 			isa = PBXGroup;
 			children = (
+				5509DC1722EF136000C376C8 /* TDSwiftRoundedIconGradientButton */,
 				5509DC0522EF12D600C376C8 /* AppDelegate.swift */,
 				5509DC0722EF12D600C376C8 /* ViewController.swift */,
 				5509DC0922EF12D600C376C8 /* Main.storyboard */,
 				5509DC0C22EF12D800C376C8 /* Assets.xcassets */,
 				5509DC0E22EF12D800C376C8 /* LaunchScreen.storyboard */,
 				5509DC1122EF12D800C376C8 /* Info.plist */,
+			);
+			path = TDSwiftRoundedIconGradientButton;
+			sourceTree = "<group>";
+		};
+		5509DC1722EF136000C376C8 /* TDSwiftRoundedIconGradientButton */ = {
+			isa = PBXGroup;
+			children = (
+				5509DC1822EF136F00C376C8 /* TDSwiftRoundedIconGradientButton.swift */,
 			);
 			path = TDSwiftRoundedIconGradientButton;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 			files = (
 				5509DC0822EF12D600C376C8 /* ViewController.swift in Sources */,
 				5509DC0622EF12D600C376C8 /* AppDelegate.swift in Sources */,
+				5509DC1922EF136F00C376C8 /* TDSwiftRoundedIconGradientButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
